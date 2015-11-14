@@ -43,7 +43,23 @@ B0000,B0000,B0000,B0001, B0000,B0000,B0000,B1111, B0000,B0000,B0000,B1001, B0000
 B0000, B0000, B0000, B0000, B0000, B0000, B0000, B0000, B0000, B0000, B0000, B0000, B0000, B0000, B0000, B0000, 0
 };
 
+const unsigned char PROGMEM Patron3[] = {
+};
 
+const unsigned char PROGMEM Patron4[] = {
+};
+
+const unsigned char PROGMEM Patron5[] = {
+};
+
+const unsigned char PROGMEM Patron6[] = {
+};
+
+const unsigned char PROGMEM Patron7[] = {
+};
+
+const unsigned char PROGMEM Patron8[] = {
+};
 const unsigned char PROGMEM Prendido[] = {
 // blink on and off
 B1111, B1111, B1111, B1111, B1111, B1111, B1111, B1111, B1111, B1111, B1111, B1111, B1111, B1111, B1111, B1111, 10,  
@@ -89,17 +105,40 @@ void loop() {
   if (Serial.available() > 0) {
     input = Serial.read();
     Serial.end();
-    if (input == '1') { 
-      
-      cargarPatron(Patron1);
-      Serial.begin(9600);
-    }
-    else
-    {
-      
-      cargarPatron(Patron2); 
-      Serial.begin(9600);     
-    }
+    switch (input) {
+      case '1':
+        cargarPatron(Patron1);
+        Serial.begin(9600);
+        break;
+      case '2':
+        cargarPatron(Patron2);
+        Serial.begin(9600);
+        break;
+      case '3':
+        cargarPatron(Patron3);
+        Serial.begin(9600);
+        break;
+      case '4':
+        cargarPatron(Patron4);
+        Serial.begin(9600);
+        break;
+      case '5':
+        cargarPatron(Patron5);
+        Serial.begin(9600);
+        break;
+      case '6':
+        cargarPatron(Patron6);
+        Serial.begin(9600);
+        break;
+      case '7':
+        cargarPatron(Patron7);
+        Serial.begin(9600);
+        break;
+      case '8':
+        cargarPatron(Patron8);
+        Serial.begin(9600);
+        break;
+   }
   }
   cargarPatron(Prendido);
 }
