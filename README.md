@@ -5,6 +5,8 @@ Enciende distintos patrones de luz en el cubo de LEDs 4x4x4 usando Java.
 
 66.02 Laboratorio | FIUBA
 
+![Alt text](https://github.com/Desuque/LED-Cube-4x4x4-Arduino/blob/master/LedCUBE.png?raw=true)
+
 #Fuentes:
 
 http://www.tecnosalva.com/c%C3%B3mo-hacer-cubo-leds-4x4x4-arduino
